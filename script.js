@@ -1,3 +1,4 @@
+const inputEl =  document.querySelector("#password")
 let passwordLength = 8
 
 function generatePassword(){
@@ -10,9 +11,13 @@ function generatePassword(){
         password += chars.substring(randomNumber, randomNumber + 1 )
     }
     
-    const inputEl =  document.querySelector("#password")
     inputEl.value = password
     
+}
+
+function copy(){
+    navigator.clipboard.writeText(inputEl.value)
+    alert("Senha copiada!!")
 }
 
 const passwordLengthEl = document.querySelector("#password-length")
