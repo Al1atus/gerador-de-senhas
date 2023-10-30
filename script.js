@@ -1,8 +1,32 @@
 const inputEl =  document.querySelector("#password")
 let passwordLength = 8
 
+const upperCaseEl = document.querySelector("#uppercase-check")
+
+const numberCaseEl = document.querySelector("#number-check")
+
+const symbolCaseEl = document.querySelector("#symbol-check")
+
+
 function generatePassword(){
-    const chars = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789?!@&*()[]"
+    let chars = "abcdefghjkmnpqrstuvwxyz"
+
+    const upperCase = "ABCDEFGHJKLMNPQRSTUVWXYZ"
+    const numberCase = "123456789"
+    const symbolCase = "?!@&*()[]"
+
+    if(upperCaseEl.checked){
+        chars += upperCase
+    }
+
+    if(numberCaseEl.checked){
+        chars += numberCase
+    }
+
+    if(symbolCaseEl.checked){
+        chars += symbolCase
+    }
+
 
     let password = ""
 
@@ -25,5 +49,9 @@ passwordLengthEl.addEventListener("input", function(){
     passwordLength = passwordLengthEl.value
     generatePassword()
 })
+
+upperCaseEl.addEventListener("click", generatePassword)
+numberCaseEl.addEventListener("click", generatePassword)
+symbolCaseEl.addEventListener("click", generatePassword)
 
 generatePassword()
