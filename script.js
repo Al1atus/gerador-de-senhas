@@ -39,6 +39,10 @@ function generatePassword(){
     
 }
 
+function calculateQuality {
+    
+}
+
 function copy(){
     navigator.clipboard.writeText(inputEl.value)
     alert("Senha copiada!!")
@@ -47,6 +51,7 @@ function copy(){
 const passwordLengthEl = document.querySelector("#password-length")
 passwordLengthEl.addEventListener("input", function(){
     passwordLength = passwordLengthEl.value
+    document.querySelector("#password-lenght-text").innerText = passwordLength
     generatePassword()
 })
 
