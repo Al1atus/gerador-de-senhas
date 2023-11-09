@@ -88,6 +88,18 @@ main {
     user-select: none;
 }
 
+.password .text input.font-sm{
+    font-size: 2rem;
+}
+
+.password .text input.font-xs{
+    font-size: 1.5rem;
+}
+
+.password .text input.font-xxs{
+    font-size: 1rem;
+}
+
 .password .actions button{
     border: none;
     background-color: transparent;
@@ -108,7 +120,7 @@ main {
     border-top-right-radius: 8px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    transition: all 0.2s;
+    transition: all 0.1s;
 }
 
 .securyti-indicator .bar.completed{
