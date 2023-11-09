@@ -7,6 +7,8 @@ const numberCaseEl = document.querySelector("#number-check")
 
 const symbolCaseEl = document.querySelector("#symbol-check")
 
+const securityIndicatorBarEl = document.querySelector("#securyti-indicator-bar")
+
 
 function generatePassword(){
     let chars = "abcdefghjkmnpqrstuvwxyz"
@@ -36,11 +38,15 @@ function generatePassword(){
     }
     
     inputEl.value = password
-    
+
+    calculateQuality()
 }
 
-function calculateQuality {
+function calculateQuality() {
+
     
+    const percent =  Math.round((passwordLength / 64) * 100)
+    securityIndicatorBarEl.style.width = `${percent}%`
 }
 
 function copy(){
